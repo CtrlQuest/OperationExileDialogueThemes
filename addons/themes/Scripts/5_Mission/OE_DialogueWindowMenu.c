@@ -1,4 +1,6 @@
 // Operation Exile companion. The framework still owns dialogue and quest actions.
+// Keep the presentation overrides out of the dedicated-server script module.
+#ifndef SERVER
 modded class DialogueWindowMenu
 {
     protected ref OE_DialogueTheme m_OETheme;
@@ -24,7 +26,7 @@ modded class DialogueWindowMenu
         if (m_OETheme)
         {
             m_OELocalConfig = m_OETheme.MakeLocalConfig(m_MenuConfig);
-            Print("[OperationExileDialogueThemes] v0.3.1 NPC=" + m_NPCID + " theme=" + m_OETheme.Code);
+            Print("[OperationExileDialogueThemes] v0.3.3 NPC=" + m_NPCID + " theme=" + m_OETheme.Code);
         }
     }
 
@@ -121,14 +123,22 @@ modded class DialogueWindowMenu
         OE_ColorWidget("CloseButtonLabel", "SpeakerNameColor");
         if (m_OETheme.HasBrandColor())
         {
-            // Cream wordmark/control lettering, with olive reserved for accents.
+            // Optional base colour for wordmark, footer and control lettering.
             OE_ColorWidget("OECode", "BrandColor");
             OE_ColorWidget("OEFullName", "BrandColor");
+            OE_ColorWidget("OEFooter", "BrandColor");
             OE_ColorWidget("OEEscapeHint", "BrandColor");
             OE_ColorWidget("SettingsButtonLabel", "BrandColor");
             OE_ColorWidget("CloseButtonLabel", "BrandColor");
             OE_ColorWidget("SettingsButtonBackground", "ResponseBackgroundColor");
             OE_ColorWidget("CloseButtonBackground", "ResponseBackgroundColor");
+        }
+        if (m_OETheme.HasHeaderTextColor())
+        {
+            // Header-only override: leave speaker, footer and controls unchanged.
+            OE_ColorWidget("OECode", "HeaderTextColor");
+            OE_ColorWidget("OEFullName", "HeaderTextColor");
+            OE_ColorWidget("OEHeading", "HeaderTextColor");
         }
     }
 
@@ -267,3 +277,4 @@ modded class DialogueWindowMenu
         }
     }
 };
+#endif

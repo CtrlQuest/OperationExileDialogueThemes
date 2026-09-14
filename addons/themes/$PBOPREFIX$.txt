@@ -1,0 +1,6 @@
+//<'OperationExileDialogueThemes_themes.pbo' properties via Mikero's dos tools, dll version 10.13>
+prefix=operationexiledialoguethemes\addons\themes;
+hemtt=1.20.1;
+version=0.3.3;
+//PboType=Arma Addon;
+//</properties>

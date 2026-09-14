@@ -15,9 +15,9 @@ class CfgMods
     {
         dir = "OperationExileDialogueThemes";
         name = "Operation Exile Dialogue Themes";
-        author = "CtrlQuest";
+        author = "CtrlQuest / Operation Exile";
         credits = "Dialogue Framework by ABTT ESK";
-        version = "0.3.1";
+        version = "0.3.3";
         type = "mod";
         dependencies[] = {"Mission"};
         class defs
@@ -50,12 +50,14 @@ class CfgOperationExileDialogueThemes
         // Alpha stays fully opaque here; the PAA's cut-out alpha is preserved.
         FrameTintColor[] = {255, 58, 56, 64};
         BrandColor[] = {255, 199, 194, 172};
+        // UCF header lettering: Steel Blue #4682B4 (alpha, red, green, blue).
+        HeaderTextColor[] = {255, 70, 130, 180};
         BackgroundColor[] = {255, 12, 13, 10};
         ResponseBackgroundColor[] = {255, 15, 16, 12};
         HoverBorderColor[] = {255, 199, 145, 40};
-        SpeakerNameColor[] = {255, 142, 153, 86};
+        SpeakerNameColor[] = {255, 70, 130, 180};
         SpeakerTextColor[] = {255, 229, 226, 213};
-        ResponseTextColor[] = {255, 229, 226, 213};
+        ResponseTextColor[] = {255, 255, 255, 255};
         RewardSelectedColor[] = {255, 40, 42, 25};
         WindowBorderColor[] = {255, 58, 60, 43};
         HeaderColor[] = {255, 13, 14, 11};

@@ -1,0 +1,53 @@
+PanelWidgetClass OEFactionHeader {
+ ignorepointer 1
+ position 0 0
+ size 0.62 32
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 1
+ priority 100
+ style UIDefaultPanel
+ {
+  PanelWidgetClass OEAccent {
+   ignorepointer 1
+   position 0 0
+   size 4 1
+   hexactpos 1
+   vexactpos 0
+   hexactsize 1
+   vexactsize 0
+   style UIDefaultPanel
+  }
+  TextWidgetClass OEFactionLabel {
+   ignorepointer 1
+   position 0.03 0
+   size 0.64 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "OPERATION EXILE"
+   font "gui/fonts/sdf_MetronBook72"
+   "exact text" 1
+   "exact text size" 14
+   "text halign" left
+   "text valign" center
+  }
+  TextWidgetClass OESubtitle {
+   ignorepointer 1
+   position 0.61 0
+   size 0.36 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "OPERATION EXILE"
+   font "gui/fonts/sdf_MetronBook72"
+   "exact text" 1
+   "exact text size" 12
+   "text halign" right
+   "text valign" center
+  }
+ }
+}

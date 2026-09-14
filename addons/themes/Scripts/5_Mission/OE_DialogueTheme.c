@@ -1,4 +1,6 @@
 // Original Operation Exile companion code. No Expansion source is included.
+// This addon only draws menus. Dedicated servers must not compile its UI classes.
+#ifndef SERVER
 class OE_DialogueTheme
 {
     string Path;
@@ -93,6 +95,11 @@ class OE_DialogueTheme
         return GetGame().ConfigIsExisting(Path + " BrandColor");
     }
 
+    bool HasHeaderTextColor()
+    {
+        return GetGame().ConfigIsExisting(Path + " HeaderTextColor");
+    }
+
     float HeaderOffset()
     {
         if (!GetGame().ConfigIsExisting(Path + " HeaderOffsetY"))
@@ -132,3 +139,4 @@ class OE_DialogueTheme
         return result;
     }
 };
+#endif

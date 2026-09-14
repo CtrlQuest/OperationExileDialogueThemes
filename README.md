@@ -2,7 +2,7 @@
 
 Custom conversation menus for **Dialogue Framework by ABTT ESK**. Includes UCF, CCA, Green Mountain and trader themes, with textured frames, response colours and Escape-to-close.
 
-**Author:** CtrlQuest / Operation Exile · **Source version:** 0.3.1
+**Author:** CtrlQuest / Operation Exile · **Source version:** 0.3.3
 
 ## Start here
 
